@@ -14,3 +14,5 @@ https://probml.github.io/pml-book/
 http://camdavidsonpilon.github.io/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/#contents
 
 http://xcelab.net/rm/statistical-rethinking/
+
+http://xcelab.net/rm/statistical-rethinking/
