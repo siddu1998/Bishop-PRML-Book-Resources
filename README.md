@@ -16,3 +16,9 @@ http://camdavidsonpilon.github.io/Probabilistic-Programming-and-Bayesian-Methods
 http://xcelab.net/rm/statistical-rethinking/
 
 https://sites.google.com/site/doingbayesiandataanalysis/1st-ed-stuff?authuser=0
+
+http://www.di.fc.ul.pt/~jpn/r/
+
+https://lear.inrialpes.fr/~jegou/bishopreadinggroup/
+
+http://www.cs.cmu.edu/~tom/10701_sp11/lectures.shtml
