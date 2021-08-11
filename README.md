@@ -22,3 +22,5 @@ http://www.di.fc.ul.pt/~jpn/r/
 https://lear.inrialpes.fr/~jegou/bishopreadinggroup/
 
 http://www.cs.cmu.edu/~tom/10701_sp11/lectures.shtml
+
+https://sebastianraschka.com/blog/2021/dl-course.html
