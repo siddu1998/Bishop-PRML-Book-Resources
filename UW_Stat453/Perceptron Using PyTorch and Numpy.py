@@ -73,6 +73,14 @@ class Perceptron():
         self.num_features = num_features
         self.weights = torch.zeros(num_features, 1, 
                                    dtype=torch.float32, device=device)
+        
+        #so you have two feature vectors x1 and x2 and you need
+        #to multiply them with w1 and w2, so in that case you need
+        #something like [w1,w2] or [[w1],[w2]]
+        #the above initialization gives [[w1],[w2]] i.e two rows and one column
+        print('[INFO] Intialized weights of shape',self.weights)
+        
+        
         self.bias = torch.zeros(1, dtype=torch.float32, device=device)
         
         # placeholder vectors so they don't
@@ -81,6 +89,9 @@ class Perceptron():
         self.zeros = torch.zeros(1)
 
     def forward(self, x):
+        #print(x.shape,self.weights.shape)
+        #here it would be 1 row 2 columns, 2 rows 1 column
+        #print(self.weights,self.weights.shape)
         linear = torch.mm(x, self.weights) + self.bias
         predictions = torch.where(linear > 0., self.ones, self.zeros)
         return predictions
@@ -92,10 +103,10 @@ class Perceptron():
         
     def train(self, x, y, epochs):
         for e in range(epochs):
-            
             for i in range(y.shape[0]):
-                # use view because backward expects a matrix (i.e., 2D tensor)
-                errors = self.backward(x[i].reshape(1, self.num_features), y[i]).reshape(-1)
+                errors = self.backward(
+                    x[i].reshape(1, self.num_features),
+                    y[i]).reshape(-1)
                 self.weights += (errors * x[i]).reshape(self.num_features, 1)
                 self.bias += errors
                 
